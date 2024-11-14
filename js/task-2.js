@@ -5,8 +5,8 @@ function formatMessage(message, maxLength) {
     const messageSlice = message.slice (0 , maxLength )+`...`;
     return messageSlice
   }
-   const messageFull = message;
-   return messageFull
+  return message;
+  
 }
 
 console.log(formatMessage("Curabitur ligula sapien", 16))
