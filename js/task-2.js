@@ -1,38 +1,46 @@
-function calcAverageCalories(days) {
-    let sumCalories = 0
-    for (let i = 0; i < Object.values(days).length; i++){
-        sumCalories += days[i].calories;
-     }
-    return Object.values(days).length === 0 ? 0 : sumCalories/(Object.values(days).length);
+// const getUsersWithFriend = (allUsers, friendName) => {
+//   const withFriend = allUsers.filter((el) => {
+//     return el.friends.includes(friendName);
+//   })
+//   return withFriend;
+// }
+
+const getUsersWithFriend = (allUsers, friendName) => {
+  return allUsers.filter(el => el.friends.includes(friendName));
 }
-    
 
 
-console.log(
-  calcAverageCalories([
-    { day: "monday", calories: 3010 },
-    { day: "tuesday", calories: 3200 },
-    { day: "wednesday", calories: 3120 },
-    { day: "thursday", calories: 2900 },
-    { day: "friday", calories: 3450 },
-    { day: "saturday", calories: 3280 },
-    { day: "sunday", calories: 3300 }
-  ])
-); // 3180
+const allUsers = [
+  {
+    name: "Moore Hensley",
+    friends: ["Sharron Pace"]
+  },
+  {
+    name: "Sharlene Bush",
+    friends: ["Briana Decker", "Sharron Pace"]
+  },
+  {
+    name: "Ross Vazquez",
+    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"]
+  },
+  {
+    name: "Elma Head",
+    friends: ["Goldie Gentry", "Aisha Tran"]
+  },
+  {
+    name: "Carey Barr",
+    friends: ["Jordan Sampson", "Eddie Strong"]
+  },
+  {
+    name: "Blackburn Dotson",
+    friends: ["Jacklyn Lucas", "Linda Chapman"]
+  },
+  {
+    name: "Sheree Anthony",
+    friends: ["Goldie Gentry", "Briana Decker"]
+  }
+];
 
-
-console.log(
-  calcAverageCalories([
-    { day: "monday", calories: 2040 },
-    { day: "tuesday", calories: 2270 },
-    { day: "wednesday", calories: 2420 },
-    { day: "thursday", calories: 1900 },
-    { day: "friday", calories: 2370 },
-    { day: "saturday", calories: 2280 },
-    { day: "sunday", calories: 2610 }
-  ])
-); // 2270
-
-console.log(
-  calcAverageCalories([])
-); // 0
+console.log(getUsersWithFriend(allUsers, "Sharron Pace"));
+console.log(getUsersWithFriend(allUsers, "Goldie Gentry"));
+console.log(getUsersWithFriend(allUsers, "Adrian Cross" ));
