@@ -30,22 +30,15 @@ img {
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  gap: 16px;
-  transition: width;
-  transition: width;
+  gap: 24px;
 }
 
 .gallery-image:hover {
-  width: 376px;
-  height: 208px;
-  margin: 4px 0;
+  transform: scale(1.05);
 }
 
 .gallery-image {
   width: 360px;
   height: 200px;
-  margin: 8px;
-  transition: margin;
-  transition: width;
-  transition: height;
+  transition: transform 250ms ease-in-out;
 }
